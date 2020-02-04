@@ -1,7 +1,7 @@
 # Chess
 A Simple Chess Engine with a beautiful GUI
 
-##To-do
+## To-do
 - Add AI algorithm
 - Add Exclusive Moves
 - Add Results
