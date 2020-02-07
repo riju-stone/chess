@@ -6,8 +6,8 @@ let mainWindow;
 
 const createWindow = async () => {
   const win = new BrowserWindow({
-    height: 1000,
-    width: 900,
+    height: 900,
+    width: 1200,
     resizable: true,
     frame: false,
     icon: path.join(__dirname, '/assets/chess.png'),

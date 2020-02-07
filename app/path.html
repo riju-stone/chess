@@ -25,13 +25,35 @@
           <span>S</span>
         </b>
     </div>
-    <div class="container">
+    <div class="reset">
       <button type="button" id="reset" class="btn btn-success"></button>
     </div>
-    <table class="chessBoard" id="chessBoard"></table>
+    <div class="board">
+      <div class="grid-container-a" align="center">
+        <div class="grid-item">a</div>
+        <div class="grid-item">b</div>
+        <div class="grid-item">c</div>
+        <div class="grid-item">d</div>
+        <div class="grid-item">e</div>
+        <div class="grid-item">f</div>
+        <div class="grid-item">g</div>
+        <div class="grid-item">h</div>
+      </div>
+      <div class="grid-container-1" align="center">
+        <div class="grid-item">8</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">1</div>
+      </div>
+      <table class="chessBoard" id="chessBoard" align="center"></table>
+    </div>
+    <div id="position"></div>
   </body>
   <script src="renderer.js"></script>
   <script src="script.js"></script>
   <script src="..\utils\board.js"></script>
-  <script src="..\utils\pieces.js"></script>
 </html>

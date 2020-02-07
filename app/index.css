@@ -105,15 +105,15 @@ html.transition *:after {
 
 #reset{
   background-image: var(--reset-logo);
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: 20px 20px;
-  margin-top: 5px;
-	margin-left: 5px;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	height: 50px;
-	width: 70px;
+  margin-top: 100px;
+	margin-right: 300px;
+  margin-bottom: 10px;
+	height: 30px;
+	width: 50px;
+  float:right;
 	-webkit-app-region: no-drag;
 	-webkit-user-select: none;
 }
@@ -159,12 +159,43 @@ html.transition *:after {
   top: 0;
 }
 
+.grid-container-a {
+  color: var(--color-text);
+  display: grid;
+  grid-template-columns: 81px 81px 81px 81px 81px 81px 81px 81px;
+  grid-template-rows: auto;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 2vh;
+  margin-right: 350px;
+  margin-top: 40px;
+  position: relative;
+}
+
+.grid-container-1{
+  color: var(--color-text);
+  display: grid;
+  grid-template-columns:auto;
+  grid-template-rows: 80px 80px 80px 80px 80px 80px 80px 80px;
+  text-align: center;
+  font-weight: bold;
+  float: left;
+  margin-left: 60px;
+  margin-top: 65px;
+  font-size: 1.7vh;
+  position: relative;
+}
+
 .chessBoard {
-  margin-top: 100px;
-  margin-left: 120px;
+  margin-top: 20px;
+  margin-left: 20px;
   padding: 10px;
   display: inline-block;
-  border: 4px solid lightGray;
+  border: 4px solid var(--bg-panel);
+  float: left;
+  grid-column: auto;
+  position: relative;
 }
 
 .chessBoard tr {
@@ -190,4 +221,23 @@ html.transition *:after {
 
 .chessBoard:hover td:hover{
   transform:scale(1);
+}
+
+#position{
+  color: var(--color-text);
+  background-color: var(--bg-panel);
+  border: none;
+  border-radius: 10px;
+  float: right;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 120px;
+  overflow-y: visible;
+  overflow-x: hidden;
+  resize: none;
+  padding: 10px;
+  height: 60vh;
+  width: 30vh;
+  text-align: center;
+  font-weight: bold; 
 }
