@@ -2,9 +2,8 @@
 A Simple Chess Engine with a beautiful GUI
 
 ## To-do
-- Add AI algorithm
-- Add Exclusive Moves
-- Add Results
+- Add Piece Exclusive Moves
+- Add Results (Checkmate, Check etc)
 - Add Special Moves
 - Add AI Opponent
 
@@ -29,7 +28,7 @@ npm i -D electron@latest
 
 - See the [`electron-builder` docs](https://www.electron.build/multi-platform-build).
 - Recommended for electron-builder [`Yarn`](https://yarnpkg.com/en/docs/install#windows-stable)
-- Create a `build` folder inside your project folder and copy the `Calc.ico` from `assets` folder
+- Create a `build` folder inside your project folder and copy the `chess.ico` from `assets` folder
 - Install electron-builder
 ```
 yarn add electron-builder --dev
