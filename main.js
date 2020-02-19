@@ -7,7 +7,7 @@ let mainWindow;
 const createWindow = async () => {
   const win = new BrowserWindow({
     height: 900,
-    width: 1200,
+    width: 1170,
     resizable: true,
     frame: false,
     icon: path.join(__dirname, '/assets/chess.png'),
@@ -15,7 +15,8 @@ const createWindow = async () => {
       nodeIntegration: true,
       webSecurity: true,
       allowRunningInsecureContent: false,
-      allowEval: false
+      allowEval: false,
+      devTools: false
     }
   });
 
@@ -26,7 +27,6 @@ const createWindow = async () => {
   win.on('closed', () => {
     mainWindow = null;
   });
-
   await win.loadFile(path.join(__dirname,'app','path.html'));
   return win;
 };

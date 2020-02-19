@@ -21,14 +21,14 @@
     "yarn": "^1.21.1"
   },
   "devDependencies": {
-    "electron": "^6.0.12",
+    "electron": "^6.1.7",
     "electron-builder": "^22.3.2"
   },
-  "build":{
+  "build": {
     "appId": "com.chess.app",
     "win": {
       "target": "nsis",
-      "icon": "build/chess.ico"
+      "icon": "build/chess.png"
     }
   }
 }

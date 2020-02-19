@@ -5,6 +5,7 @@
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <meta charset="utf-8">
     <title>Pathfinder</title>
@@ -26,6 +27,13 @@
         </b>
     </div>
     <div class="reset">
+      <b id="reset_info">
+        <span>R</span>
+        <span>E</span>
+        <span>S</span>
+        <span>E</span>
+        <span>T</span>
+      </b>
       <button type="button" id="reset" class="btn btn-success"></button>
     </div>
     <div class="board">
@@ -51,9 +59,10 @@
       </div>
       <table class="chessBoard" id="chessBoard" align="center"></table>
     </div>
-    <div id="position"></div>
+    <div id="position">
+    </div>
   </body>
   <script src="renderer.js"></script>
   <script src="script.js"></script>
-  <script src="..\utils\board.js"></script>
+  <script src="..\utils\moves.js"></script>
 </html>
