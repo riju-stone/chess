@@ -113,15 +113,6 @@ var initPos = function(){
 
 initPos();
 
-//movements
-/*for(var i = 0; i < team.length; i++){
-  cells[i].addEventListener('click', ((j) => {
-      return function(){
-        movePiece(this, j);
-      }
-    })(i))
-}*/
-
 var movePiece = function(that, x){
   if(state === false){                //if state is false then no cell is selected
     if(that.innerHTML != ''){         //this checking is used to prevent selecting empty cells
@@ -171,12 +162,26 @@ var movePiece = function(that, x){
   if(res == 'b'){
     evaluate(piece[x]+" eliminates "+init);
     whiteEliminations += getPoints(init);
-    showPoints();
+    if(init === 'king'){
+      evaluate("Checkmate!");
+      evaluate("Game Over! Black Wins!!");
+      evaluate("Reset the Board");
+    }
+    else{
+      showPoints();
+    }
   }
   else if(res == 'w'){
     evaluate(piece[x]+" eliminates "+init);
     blackEliminations += getPoints(init);
-    showPoints();
+    if(init === 'king'){
+      evaluate("Checkmate!");
+      evaluate("Game Over! White Wins!!");
+      evaluate("Reset the Board");
+    }
+    else{
+      showPoints();
+    }
   }
 }
 

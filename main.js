@@ -16,7 +16,7 @@ const createWindow = async () => {
       webSecurity: true,
       allowRunningInsecureContent: false,
       allowEval: false,
-      devTools: false
+      //devTools: false
     }
   });
 
