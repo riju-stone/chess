@@ -1,7 +1,7 @@
 {
   "name": "chess",
   "productName": "Chess",
-  "version": "1.0.0",
+  "version": "v1.0.3",
   "description": "The Iconic Chess Game",
   "main": "main.js",
   "author": "Riju Chakraborty",
@@ -18,10 +18,10 @@
     "axios": "^0.19.0",
     "electron-debug": "^3.0.1",
     "electron-util": "^0.12.3",
-    "yarn": "^1.21.1"
+    "yarn": "^1.22.0"
   },
   "devDependencies": {
-    "electron": "^6.1.7",
+    "electron": "^8.1.1",
     "electron-builder": "^22.3.2"
   },
   "build": {

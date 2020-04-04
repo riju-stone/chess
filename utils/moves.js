@@ -47,7 +47,7 @@ function allowedMoves(current, pos){
 function pieceRestrictionW(piece){
   switch(piece){
     case 'pawn':
-
+      
     break;
     case 'rook':
     break;

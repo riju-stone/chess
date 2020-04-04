@@ -1,20 +1,22 @@
 const electron = require('electron');
-const { app, BrowserWindow, webPreferences } = require('electron');
+const { app, BrowserWindow, screen, webPreferences } = require('electron');
 const path = require('path');
 
 let mainWindow;
 
 const createWindow = async () => {
+  const mainScreen = screen.getPrimaryDisplay();
   const win = new BrowserWindow({
-    height: 900,
-    width: 1170,
-    resizable: true,
+    width: mainScreen.size.width - 550,
+    height: mainScreen.size.height - 150,
+    minWidth: 1380,
+    minHeight: 950,
     frame: false,
     icon: path.join(__dirname, '/assets/chess.png'),
+    resizable: true,
     webPreferences:{
       nodeIntegration: true,
       webSecurity: true,
-      allowRunningInsecureContent: false,
       allowEval: false,
       //devTools: false
     }
@@ -22,11 +24,13 @@ const createWindow = async () => {
 
   win.on('ready-to-show', async () =>{
     mainWindow.show();
+    mainWindow.focus();
   });
 
   win.on('closed', () => {
     mainWindow = null;
   });
+
   await win.loadFile(path.join(__dirname,'app','path.html'));
   return win;
 };

@@ -16,7 +16,7 @@ function randomLightColor(){
       color += letters[Math.floor(Math.random() * letters.length)];
   }
   return color;
-};
+}
 
 var createBoard = function() {
     var chessBoard = document.getElementById("chessBoard");
@@ -35,7 +35,7 @@ var createBoard = function() {
             row.appendChild(cell);
         }
     }
-}
+};
 
 module.exports = {
   createBoard
