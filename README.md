@@ -3,7 +3,6 @@ A Simple Chess Engine with a beautiful GUI
 
 ## To-do
 - Add Piece Exclusive Moves
-- Add Results (Checkmate, Check etc)
 - Add Special Moves
 - Add AI Opponent
 
