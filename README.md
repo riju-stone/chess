@@ -10,7 +10,7 @@ A Simple Chess Engine with a beautiful GUI
 ![Chess](https://i.postimg.cc/f373ppFQ/Annotation-2020-08-07-192850.png)
 
 ## To-do
-- :white_check_mark: Responsive UI
+:white_check_mark: Responsive UI
 - [ ] Add Drag Operations
 - [ ] Add Piece Exclusive Moves
 - [ ] Add Special Moves
