@@ -3,9 +3,9 @@ A Simple Chess Engine with a beautiful GUI
 
 # Features
 - ## Beautiful GUI 
-![Chess](https://i.postimg.cc/qvmcrKt8/Annotation-2020-08-07-192802.png)
+![Chess](https://i.postimg.cc/MpV7MGpL/Annotation-2020-08-07-192738.png)
 - ## Random Color Chessboard 
-![Chess](https://i.postimg.cc/W4hG14rx/Annotation-2020-08-07-192826.png) ![Chess](https://i.postimg.cc/MpV7MGpL/Annotation-2020-08-07-192738.png)
+![Chess](https://i.postimg.cc/qvmcrKt8/Annotation-2020-08-07-192802.png) ![Chess](https://i.postimg.cc/W4hG14rx/Annotation-2020-08-07-192826.png)
 - ## Dark Mode! 
 ![Chess](https://i.postimg.cc/4yYtJf0B/Annotation-2020-08-07-192850.png)
 
