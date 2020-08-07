@@ -3,14 +3,14 @@ A Simple Chess Engine with a beautiful GUI
 
 # Features
 - Beautiful UI
-[url=https://postimg.cc/0b3JwpmF][img]https://i.postimg.cc/0b3JwpmF/Annotation-2020-08-07-192738.png[/img][/url]
+https://i.postimg.cc/0b3JwpmF/Annotation-2020-08-07-192738.png
 
 - Random color chessboard everytime
-[url=https://postimg.cc/5XCQq6S0][img]https://i.postimg.cc/5XCQq6S0/Annotation-2020-08-07-192802.png[/img][/url]
-[url=https://postimg.cc/TyvLkftc][img]https://i.postimg.cc/TyvLkftc/Annotation-2020-08-07-192826.png[/img][/url]
+https://i.postimg.cc/5XCQq6S0/Annotation-2020-08-07-192802.png
+https://i.postimg.cc/TyvLkftc/Annotation-2020-08-07-192826.png
 
 - Dark mode !
-[url=https://postimg.cc/f373ppFQ][img]https://i.postimg.cc/f373ppFQ/Annotation-2020-08-07-192850.png[/img][/url]
+https://i.postimg.cc/f373ppFQ/Annotation-2020-08-07-192850.png
 
 ## To-do
 - Add Piece Exclusive Moves
