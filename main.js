@@ -18,13 +18,10 @@ const createWindow = async () => {
       nodeIntegration: true,
       webSecurity: true,
       allowEval: false,
+      contextIsolation: false,
+      enableRemoteModule: true
       //devTools: false
     }
-  });
-
-  win.on('ready-to-show', async () =>{
-    mainWindow.show();
-    mainWindow.focus();
   });
 
   win.on('closed', () => {

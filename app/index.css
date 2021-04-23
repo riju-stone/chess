@@ -20,7 +20,7 @@ html[data-theme='dark'] {
 
 body {
 	background: var(--bg);
-  font-family: 'Lacquer', sans-serif;
+  font-family: 'Patrick Hand', cursive;
 }
 
 input[type=checkbox]{

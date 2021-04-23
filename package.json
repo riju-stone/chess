@@ -8,7 +8,7 @@
   "license": "ISC",
   "scripts": {
     "postinstall": "electron-builder install-app-deps",
-    "start": "electron app/",
+    "start": "electron .",
     "electron": "electron .",
     "pack": "electron-builder --dir",
     "dist": "electron-builder --windows --publish always",

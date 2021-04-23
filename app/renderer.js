@@ -1,8 +1,6 @@
 'use strict';
 
-const { remote, BrowserWindow } = require('electron');
-const path = require('path');
-const {getCurrentWindow, globalShortcut} = require('electron').remote;
+const remote = require('electron').remote;
 
 document.getElementById('min').addEventListener('click', minWindow);
 document.getElementById('cls').addEventListener('click', closeWindow);
@@ -19,6 +17,6 @@ function closeWindow(){
 }
 
 var reset = document.getElementById('reset');
-var reload = ()=>{getCurrentWindow().reload()};
+var reload = ()=>{remote.getCurrentWindow().reload()};
 
 reset.addEventListener('click', reload);
