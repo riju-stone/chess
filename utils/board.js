@@ -1,4 +1,8 @@
-'use strict';
+'use strict'
+
+const $ = require('jquery')
+
+// Board UI
 
 function randomColor(){
   var letters = '3456789';
@@ -22,8 +26,8 @@ var createBoard = function() {
     let color = randomColor();
     let color2 = randomLightColor();
 
-    let black = document.querySelectorAll('.column.black')
-    let white = document.querySelectorAll('.column.white')
+    let black = $('.column.black')
+    let white = $('.column.white')
 
     for(var i = 0; i < black.length; i++){
       black[i].style.background = color
@@ -32,3 +36,11 @@ var createBoard = function() {
   };
 
 createBoard()
+
+//Chess Logic
+const horizontalAxis = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+const verticalAxis = ['1', '2', '3', '4', '5', '6', '7', '8']
+const table = $('#table')
+const pieces = $(".piece")
+const analysis = $('#position')
+

@@ -15,9 +15,12 @@
     "release": "np"
   },
   "dependencies": {
+    "@shopify/draggable": "^1.0.0-beta.8",
     "axios": "^0.21.1",
     "electron-debug": "^3.0.1",
     "electron-util": "^0.12.3",
+    "jquery": "^3.6.0",
+    "jquery-ui": "^1.12.1",
     "yarn": "^1.22.0"
   },
   "devDependencies": {

@@ -13,13 +13,14 @@ const createWindow = async () => {
     minHeight: 950,
     frame: false,
     icon: path.join(__dirname, '/assets/chess.png'),
-    resizable: true,
+    resizable: false,
     webPreferences:{
       nodeIntegration: true,
       webSecurity: true,
       allowEval: false,
       contextIsolation: false,
-      enableRemoteModule: true
+      enableRemoteModule: true,
+      worldSafeExecuteJavaScript: true
       //devTools: false
     }
   });
