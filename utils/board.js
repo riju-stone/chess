@@ -19,24 +19,16 @@ function randomLightColor(){
 }
 
 var createBoard = function() {
-    var chessBoard = document.getElementById("chessBoard");
-    var color = randomColor();
-    var color2 = randomLightColor();
-    for (var i = 0; i < 8; i++) {
-        var row = chessBoard.appendChild(document.createElement("tr"));
-        for (var j = 0; j < 8; j++) {
-            var cell = document.createElement('td')
-            if((i+j)%2 === 0){
-              cell.style.backgroundColor = color2;
-            }
-            else {
-              cell.style.backgroundColor = color;
-            }
-            row.appendChild(cell);
-        }
-    }
-};
+    let color = randomColor();
+    let color2 = randomLightColor();
 
-module.exports = {
-  createBoard
-};
+    let black = document.querySelectorAll('.column.black')
+    let white = document.querySelectorAll('.column.white')
+
+    for(var i = 0; i < black.length; i++){
+      black[i].style.background = color
+      white[i].style.background = color2
+    }
+  };
+
+createBoard()

@@ -1,8 +1,4 @@
 'use strict';
-
-const Board = require('../utils/board.js');
-Board.createBoard();
-
 const Chess = require('../utils/chess.js');
 
 const pawn_offset = {
@@ -28,62 +24,21 @@ for(var i = 0; i < Chess.team.length; i++){
     })(i))
 }
 
-
-//this function is called to handle the allowable moves of different pieces...
-function allowedMoves(current, pos){
-  var piece = Chess.piece[pos];
-  var team = Chess.team[pos];
-
-  switch(team){
-    case 'w':
-      pieceRestrictionW(team, piece);
-    break;
-    case 'b':
-      pieceRestrictionB(team, piece);
-    break;
-  }
+function get(x, y){
+  return Chess.piece[(x-1) * 8 + (y-1)]
 }
 
-function pieceRestrictionW(piece){
-  switch(piece){
-    case 'pawn':
-      
-    break;
-    case 'rook':
-    break;
-    case 'knight':
-    break;
-    case 'bishop':
-    break;
-    case 'queen':
-    break;
-    case 'king':
-    break;
-  }
+function getByIndex(index){
+  return Chess.piece[index]
 }
 
-function pieceRestrictionB(piece){
-  switch(piece){
-    case 'pawn':
-    break;
-    case 'rook':
-    break;
-    case 'knight':
-    break;
-    case 'bishop':
-    break;
-    case 'queen':
-    break;
-    case 'king':
-    break;
-  }
-}
-//this function is called to handle the allowable elimination of different pieces...
-function allowed_eliminations(){
+function parseIndex(index){
+  let row = Math.floor(index / 8) + 1
+  let column = index - ((row - 1) * 8) +1
 
+  return {row: row, column: column}
 }
 
-//this function is called to register a piece which is blocked...
-function block(){
-
+function getIndex(x, y) {
+	return (x-1) * 8 + (y-1)
 }
