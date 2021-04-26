@@ -279,7 +279,7 @@ html.transition *:after {
   position: relative;
   width: 40px;
   height: 40px;
-  margin-left: 8px;
+  margin-left: 5px;
   margin-top: 15px;
   background: transparent;
   justify-content: center;
@@ -346,4 +346,17 @@ html.transition *:after {
   font-weight: bold;
   font-size: 2.2vh;
   line-height: 1.2vh;
+}
+
+#credit{
+  display: inline-block;
+  position: absolute;
+  top: 95vh;
+  left: 40vw;
+}
+
+#credit p{
+  text-align: center;
+  font-size: 1.2em;
+  color: var(--color-text);
 }

@@ -1,11 +1,11 @@
 {
   "name": "chess",
   "productName": "Chess",
-  "version": "v1.0.3",
-  "description": "The Iconic Chess Game",
+  "version": "v1.0.2",
+  "description": "A Simple Chess Engine",
   "main": "main.js",
-  "author": "Riju Chakraborty",
-  "license": "ISC",
+  "author": "Arighna Chakraborty",
+  "license": "MIT",
   "scripts": {
     "postinstall": "electron-builder install-app-deps",
     "start": "electron .",
@@ -15,17 +15,14 @@
     "release": "np"
   },
   "dependencies": {
-    "@shopify/draggable": "^1.0.0-beta.8",
     "axios": "^0.21.1",
-    "electron-debug": "^3.0.1",
+    "electron-debug": "^3.2.0",
     "electron-util": "^0.12.3",
-    "jquery": "^3.6.0",
-    "jquery-ui": "^1.12.1",
-    "yarn": "^1.22.0"
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
-    "electron": "^9.4.0",
-    "electron-builder": "^22.3.2"
+    "electron": "^9.4.4",
+    "electron-builder": "^22.10.5"
   },
   "build": {
     "appId": "com.chess.app",
