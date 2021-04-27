@@ -1,5 +1,7 @@
 'use strict'
 
+const $ = require('jquery')
+
 // Board UI
 
 function randomColor(){
@@ -41,6 +43,7 @@ function randomLightColor(){
   const table = document.getElementById("table")
   const pieces = document.getElementsByClassName("piece")
   const analysis = document.getElementById("position")
+  const swapButton = document.getElementById("change")
 
   const board = {
     0:'a8', 1:'b8', 2:'c8', 3:'d8', 4:'e8', 5:'f8', 6:'g8', 7:'h8',
@@ -53,6 +56,30 @@ function randomLightColor(){
     56:'a1', 57:'b1', 58:'c1', 59:'d1', 60:'e1', 61:'f1', 62:'g1', 63:'h1'
   }
 
+  
+  //Swap Team when swap button is pressed
+  var currSide = "black"
 
+  swapButton.addEventListener("click", () => {
+    let white = $('.piece.white')
+    let black = $('.piece.black')
+    let swapText = $('#change_info')
 
+    console.log(white, black)
+
+    white.removeClass("white")
+    white.addClass("black")
+
+    black.removeClass("black")
+    black.addClass("white")
+
+    if(swapText.text() === "BLACK"){
+      swapText.text("WHITE")
+      currSide = "white"
+    }
+    else{
+      swapText.text("BLACK")
+      currSide = "black"
+    }  
+  })
 })()
