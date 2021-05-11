@@ -3,9 +3,10 @@ A Simple Chess Engine with a beautiful GUI
 
 # Features
 - Beautiful GUI 
-<img src="https://i.postimg.cc/MpV7MGpL/Annotation-2020-08-07-192738.png" width=500>
+<img src="screenshots/light_white.jpg" width=500>
+<img src="screenshots/light_black.jpg" width=500>
 
-- Random Color Chessboard 
+- A different Chessboard everytime !
 
 - Dark Mode! 
 <img src="https://i.postimg.cc/4yYtJf0B/Annotation-2020-08-07-192850.png" width=500>
