@@ -20,7 +20,6 @@ const createWindow = async () => {
       allowEval: false,
       contextIsolation: false,
       enableRemoteModule: true,
-      worldSafeExecuteJavaScript: true
       //devTools: false
     }
   });

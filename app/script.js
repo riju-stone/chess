@@ -1,20 +1,56 @@
-var checkbox = document.querySelector('input[name=theme]');
-var randomSwitch = document.getElementById('random');
+const remote = require('electron').remote;
 
-checkbox.addEventListener('change', function() {
-    if(this.checked) {
-        trans()
-        document.documentElement.setAttribute('data-theme', 'dark')
-    }
-    else {
-        trans()
-        document.documentElement.setAttribute('data-theme', 'light')
-         }
-})
+var checkbox = document.querySelector('input[name=theme]');
+var win = remote.getCurrentWindow();
+
+function minWindow(){
+  win.minimize();
+}
+
+function closeWindow(){
+  win.close();
+}
+
+function resetWindow(){
+   win.reload()
+}
+
+function toDarkTheme() {
+  trans()
+  document.documentElement.setAttribute('data-theme', 'dark')
+  localStorage.setItem('theme', 'dark')
+}
+
+function toLightTheme(){
+  trans()
+  document.documentElement.setAttribute('data-theme', 'light')
+  localStorage.setItem('theme', 'light')
+}
+
+function isSwitchChecked() {
+  if(this.checked)
+    toDarkTheme()
+  else
+    toLightTheme()
+}
 
 let trans = () => {
-    document.documentElement.classList.add('transition');
-    window.setTimeout(() => {
-        document.documentElement.classList.remove('transition')
-    }, 1000)
+  document.documentElement.classList.add('transition');
+  window.setTimeout(() => {
+      document.documentElement.classList.remove('transition')
+  }, 1000)
 }
+
+(function loadTheme() {
+  let theme = localStorage.getItem('theme')
+  if(theme === 'dark'){
+    checkbox.checked = true
+    toDarkTheme()
+  }
+}
+)()
+
+document.getElementById('min').addEventListener('click', minWindow)
+document.getElementById('cls').addEventListener('click', closeWindow)
+document.getElementById('reset').addEventListener('click', resetWindow)
+checkbox.addEventListener('change', isSwitchChecked)
