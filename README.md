@@ -3,8 +3,8 @@ A Simple Chess Engine with a beautiful GUI
 
 # Features
 - Beautiful GUI 
-<img src="screenshots/light_white.jpg" width=500>
-<img src="screenshots/light_black.jpg" width=500>
+![White](screenshots/light_white.jpg)
+![Black](screenshots/light_black.jpg)
 
 - A different Chessboard everytime !
 
