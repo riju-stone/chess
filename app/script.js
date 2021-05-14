@@ -9,6 +9,7 @@ function minWindow(){
 
 function closeWindow(){
   win.close();
+  localStorage.removeItem('theme')
 }
 
 function resetWindow(){
@@ -47,6 +48,8 @@ let trans = () => {
     checkbox.checked = true
     toDarkTheme()
   }
+  else  
+    toLightTheme()
 }
 )()
 

@@ -20,7 +20,7 @@ function randomLightColor(){
   return color;
 }
 
-(() => {
+$(() => {
   function createBoard() {
       let color = randomColor();
       let color2 = randomLightColor();
@@ -38,10 +38,8 @@ function randomLightColor(){
 
 //Chess Logic
   
-  const table = document.getElementById("table")
-  const pieces = document.getElementsByClassName("piece")
-  const analysis = document.getElementById("position")
-  const swapButton = document.getElementById("change")
+  const table = $('.table')
+  const swapButton = $('.change')
 
   const board = {
     0:'a8', 1:'b8', 2:'c8', 3:'d8', 4:'e8', 5:'f8', 6:'g8', 7:'h8',
@@ -54,22 +52,21 @@ function randomLightColor(){
     56:'a1', 57:'b1', 58:'c1', 59:'d1', 60:'e1', 61:'f1', 62:'g1', 63:'h1'
   }
 
+  var whitePieces = $('.white.piece')
+  var blackPieces = $('.black.piece')
+
   
   //Swap Team when swap button is pressed
   var currSide = "black"
 
-  swapButton.addEventListener("click", () => {
-    let white = $('.piece.white')
-    let black = $('.piece.black')
+  swapButton.on("click", () => {
     let swapText = $('#change_info')
 
-    console.log(white, black)
+    whitePieces.removeClass("white")
+    whitePieces.addClass("black")
 
-    white.removeClass("white")
-    white.addClass("black")
-
-    black.removeClass("black")
-    black.addClass("white")
+    blackPieces.removeClass("black")
+    blackPieces.addClass("white")
 
     if(swapText.text() === "BLACK"){
       swapText.text("WHITE")
@@ -80,4 +77,7 @@ function randomLightColor(){
       currSide = "black"
     }  
   })
-})()
+
+  whitePieces.draggable()
+  blackPieces.draggable()
+})
