@@ -1,7 +1,5 @@
 'use strict'
 
-const $ = require('jquery')
-
 // Board UI
 
 function randomColor(){
