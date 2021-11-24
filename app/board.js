@@ -54,7 +54,6 @@ $(() => {
 
   var whitePieces = $('.white.piece')
   var blackPieces = $('.black.piece')
-
   
   //Swap Team when swap button is pressed
   var currSide = "black"
@@ -77,7 +76,4 @@ $(() => {
       currSide = "black"
     }  
   })
-
-  whitePieces.draggable()
-  blackPieces.draggable()
 })
