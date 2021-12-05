@@ -25,7 +25,7 @@ A Simple Chess Engine with a beautiful GUI
 :white_check_mark: Responsive UI\
 :white_check_mark: Add Piece Exclusive Moves\
 :white_check_mark: Add Special Moves\
-:white_check_mark: Add AI Opponent\
+:white_check_mark: Add AI Opponent
 
 If you have any suggestions feel free to open an issue.
 
