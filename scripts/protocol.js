@@ -1,69 +1,22 @@
-var perft_leafNodes;
-
-function Perft(depth) { 
-	MakeNullMove();
-	if(brd_posKey !=  GeneratePosKey())  {
-		console.log(printGameLine());
-		PrintBoard();
-		srch_stop = BOOL.TRUE;
-		console.log('Hash Error After Make');
-	}   
-	
-	TakeNullMove();
-	if(brd_posKey !=  GeneratePosKey())  {
-		console.log(printGameLine());
-		PrintBoard();
-		srch_stop = BOOL.TRUE;
-		console.log('Hash Error After Take');
-	}   
-
-	if(depth == 0) {
-        perft_leafNodes++;
-        return;
-    }	
-
-    GenerateMoves();
-    
-	var index;
-	var move;
-	for(index = brd_moveListStart[brd_ply]; index < brd_moveListStart[brd_ply + 1]; ++index) {
-	
-		move = brd_moveList[index];	
-		if(MakeMove(move) == BOOL.FALSE) {
-			continue;
-		}		
-		Perft(depth-1);
-		TakeMove();
+function ThreeFoldRep() {
+	var i = 0, r = 0;
+	for (i = 0; i < brd_hisPly; ++i)	{
+	    if (brd_history[i].posKey == brd_posKey) {
+		    r++;
+		}
 	}
-
-    return;
+	return r;
 }
 
-function PerftTest(depth) {    
+function DrawMaterial() {
 
-	PrintBoard();
-	console.log("Starting Test To Depth:" + depth);	
-	perft_leafNodes = 0;
-	GenerateMoves();
-	var index;
-	var move;
-	var moveNum = 0;
-	for(index = brd_moveListStart[brd_ply]; index < brd_moveListStart[brd_ply + 1]; ++index) {
+    if (brd_pceNum[PIECES.wP]!=0 || brd_pceNum[PIECES.bP]!=0) return BOOL.FALSE;
+    if (brd_pceNum[PIECES.wQ]!=0 || brd_pceNum[PIECES.bQ]!=0 || brd_pceNum[PIECES.wR]!=0 || brd_pceNum[PIECES.bR]!=0) return BOOL.FALSE;
+    if (brd_pceNum[PIECES.wB] > 1 || brd_pceNum[PIECES.bB] > 1) {return BOOL.FALSE;}
+    if (brd_pceNum[PIECES.wN] > 1 || brd_pceNum[PIECES.bN] > 1) {return BOOL.FALSE;}
+    if (brd_pceNum[PIECES.wN]!=0 && brd_pceNum[PIECES.wB]!=0) {return BOOL.FALSE;}
+    if (brd_pceNum[PIECES.bN]!=0 && brd_pceNum[PIECES.bB]!=0) {return BOOL.FALSE;}
 	
-		move = brd_moveList[index];	
-		if(MakeMove(move) == BOOL.FALSE) {
-			continue;
-		}	
-		moveNum++;	
-        var cumnodes = perft_leafNodes;
-		Perft(depth-1);
-		TakeMove();
-		var oldnodes = perft_leafNodes - cumnodes;
-        console.log("move:" + moveNum + " " + PrMove(move) + " " + oldnodes);
-	}
-    
-	console.log("Test Complete : " + perft_leafNodes + " leaf nodes visited");
-        $("#FenOutput").text("Test Complete : " + perft_leafNodes + " leaf nodes visited");
-
-    return;
+    return BOOL.TRUE;
 }
+

@@ -11,7 +11,7 @@ function MIRROR120(sq) {
 	return FR2SQ(file,rank);
 }
 
-$("#SetFen").click(function () {
+$("#SetFen").on('click', function () {
 	var fenStr = $("#fenIn").val();	
 	ParseFen(fenStr);
 	PrintBoard();		
@@ -118,7 +118,7 @@ function PreSearch() {
 		
 		if(GameController.GameOver != BOOL.TRUE) {				
 			srch_thinking = BOOL.TRUE;
-			$('#ThinkingImageDiv').append('<image src="images/think3.png" id="ThinkingPng"/>')
+			$('#ThinkingImageDiv').append('<image src="assets/think.png" id="ThinkingPng"/>')
 			setTimeout( function() {StartSearch(); }, 200);
 		}
 }
