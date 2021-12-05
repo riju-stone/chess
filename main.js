@@ -12,7 +12,7 @@ const createWindow = async () => {
     minWidth: 1380,
     minHeight: 950,
     frame: false,
-    icon: path.join(__dirname, '/assets/chess.png'),
+    icon: path.join(__dirname, '/app/assets/chess.png'),
     resizable: false,
     webPreferences:{
       nodeIntegration: true,
@@ -28,7 +28,7 @@ const createWindow = async () => {
     mainWindow = null;
   });
 
-  await win.loadFile(path.join(__dirname,'app','path.html'));
+  await win.loadFile(path.join(__dirname,'app','index.html'));
   return win;
 };
 

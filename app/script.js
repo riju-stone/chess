@@ -12,9 +12,9 @@ function closeWindow(){
   localStorage.removeItem('theme')
 }
 
-function resetWindow(){
-   win.reload()
-}
+// function resetWindow(){
+//    win.reload()
+// }
 
 function toDarkTheme() {
   trans()
@@ -55,5 +55,5 @@ let trans = () => {
 
 document.getElementById('min').addEventListener('click', minWindow)
 document.getElementById('cls').addEventListener('click', closeWindow)
-document.getElementById('reset').addEventListener('click', resetWindow)
+// document.getElementById('reset').addEventListener('click', resetWindow)
 checkbox.addEventListener('change', isSwitchChecked)
