@@ -23,10 +23,11 @@ A Simple Chess Engine with a beautiful GUI
 
 ## To-do
 :white_check_mark: Responsive UI
-- [ ] Add Drag Operations
-- [ ] Add Piece Exclusive Moves
-- [ ] Add Special Moves
-- [ ] Add AI Opponent
+:white_check_mark: Add Piece Exclusive Moves
+:white_check_mark: Add Special Moves
+:white_check_mark: Add AI Opponent
+
+If there're any suggestions feel free to open and issue
 
 # Requirements
 
