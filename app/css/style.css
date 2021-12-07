@@ -333,6 +333,7 @@ html.transition *:after {
   outline: none;
   border-radius: 5px;
   color: var(--bg);
+  cursor: pointer;
 }
 
 #NewGameButton {
