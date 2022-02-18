@@ -9,7 +9,7 @@ var srch_best;
 var srch_thinking;
 
 function CheckUp() {
-  if ($.Date.now() - srch_start > srch_time) srch_stop = BOOL.TRUE;
+  if (Date.now() - srch_start > srch_time) srch_stop = BOOL.TRUE;
 }
 
 function PickNextMove(moveNum) {
@@ -70,7 +70,7 @@ function ClearForSearch() {
   srch_nodes = 0;
   srch_fh = 0;
   srch_fhf = 0;
-  srch_start = $.Date.now();
+  srch_start = Date.now();
   srch_stop = BOOL.FALSE;
 }
 
@@ -304,7 +304,7 @@ function UpdateDOMStats() {
   $("#ScoreOut").text(scoreText);
   $("#NodesOut").text("Nodes: " + domUpdate_nodes);
   $("#TimeOut").text(
-    "Time: " + (($.Date.now() - srch_start) / 1000).toFixed(1) + "s"
+    "Time: " + ((Date.now() - srch_start) / 1000).toFixed(1) + "s"
   );
 }
 
